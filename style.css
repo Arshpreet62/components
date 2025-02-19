@@ -734,8 +734,8 @@
   .min-h-50 {
     min-height: calc(var(--spacing) * 50);
   }
-  .min-h-70 {
-    min-height: calc(var(--spacing) * 70);
+  .min-h-80 {
+    min-height: calc(var(--spacing) * 80);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -746,6 +746,9 @@
   .w-44 {
     width: calc(var(--spacing) * 44);
   }
+  .w-80 {
+    width: calc(var(--spacing) * 80);
+  }
   .w-\[90\%\] {
     width: 90%;
   }
@@ -754,6 +757,12 @@
   }
   .min-w-\[75\%\] {
     min-width: 75%;
+  }
+  .scale-75 {
+    --tw-scale-x: 75%;
+    --tw-scale-y: 75%;
+    --tw-scale-z: 75%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .cursor-not-allowed {
     cursor: not-allowed;
@@ -845,9 +854,6 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -920,6 +926,9 @@
     .sm\:relative {
       position: relative;
     }
+    .sm\:p-5 {
+      padding: calc(var(--spacing) * 5);
+    }
   }
   @media (width>=48rem) {
     .md\:static {
@@ -927,6 +936,15 @@
     }
     .md\:top-0 {
       top: calc(var(--spacing) * 0);
+    }
+    .md\:min-w-\[75\%\] {
+      min-width: 75%;
+    }
+    .md\:scale-100 {
+      --tw-scale-x: 100%;
+      --tw-scale-y: 100%;
+      --tw-scale-z: 100%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
     }
     .md\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -936,9 +954,6 @@
     }
     .md\:gap-4 {
       gap: calc(var(--spacing) * 4);
-    }
-    .md\:p-10 {
-      padding: calc(var(--spacing) * 10);
     }
   }
   @media (width>=64rem) {
@@ -1011,6 +1026,21 @@ h2 {
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transform: none;
   }
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
 @property --tw-border-style {
   syntax: "*";

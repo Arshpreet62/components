@@ -11953,7 +11953,7 @@ function Ro({ type: A, placeholder: cl, children: q }) {
   const [r, G] = _a.useState(!1),
     [L, el] = _a.useState(cl);
   return z.jsxs("div", {
-    className: "bg-black flex flex-col gap-2 ",
+    className: "bg-black flex flex-col gap-2",
     children: [
       z.jsxs("div", {
         className:
@@ -12055,7 +12055,8 @@ function Xo() {
     [G, L] = _a.useState(!1),
     [el, ul] = _a.useState(!1);
   return z.jsxs("div", {
-    className: "bg-black flex gap-7 flex-col md:gap-4 p-2 md:p-10",
+    className:
+      "bg-black flex gap-7 flex-col scale-75  sm:p-5 md:gap-4 p-10 md:scale-100",
     children: [
       z.jsxs("div", {
         className: "  flex items-center gap-3 ",
@@ -12313,8 +12314,11 @@ function Co() {
         }),
         z.jsxs("div", {
           className:
-            "flex flex-col gap-6 items-center bg-[#27272a] min-h-70 justify-center min-w-[75%]",
-          children: [z.jsx("h2", {}), z.jsx(Xo, {})],
+            "flex flex-col  items-center  bg-[#27272a]  justify-center w-80   md:min-w-[75%] gap-6 min-h-80",
+          children: [
+            z.jsx("h2", { children: "Steps component" }),
+            z.jsx(Xo, {}),
+          ],
         }),
       ],
     }),
