@@ -12055,7 +12055,7 @@ function Xo() {
     [G, L] = _a.useState(!1),
     [el, ul] = _a.useState(!1);
   return z.jsxs("div", {
-    className: "bg-black flex gap-7 flex-col md:gap-4 p-10",
+    className: "bg-black flex gap-7 flex-col md:gap-4 p-2 md:p-10",
     children: [
       z.jsxs("div", {
         className: "  flex items-center gap-3 ",

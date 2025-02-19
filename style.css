@@ -845,6 +845,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -933,6 +936,9 @@
     }
     .md\:gap-4 {
       gap: calc(var(--spacing) * 4);
+    }
+    .md\:p-10 {
+      padding: calc(var(--spacing) * 10);
     }
   }
   @media (width>=64rem) {
