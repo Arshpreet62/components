@@ -508,7 +508,7 @@
   embed,
   object {
     vertical-align: middle;
-    display: flex;
+    display: block;
   }
   img,
   video {
@@ -704,8 +704,14 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-12 {
     height: calc(var(--spacing) * 12);
+  }
+  .h-\[2px\] {
+    height: 2px;
   }
   .h-fit {
     height: fit-content;
@@ -713,11 +719,20 @@
   .h-full {
     height: 100%;
   }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-18 {
+    width: calc(var(--spacing) * 18);
+  }
   .w-44 {
     width: calc(var(--spacing) * 44);
   }
   .w-fit {
     width: fit-content;
+  }
+  .cursor-not-allowed {
+    cursor: not-allowed;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -737,8 +752,20 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -748,6 +775,9 @@
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
+  }
+  .rounded-full {
+    border-radius: 3.40282e38px;
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -759,8 +789,18 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-\[2px\] {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-\[\#27272a\] {
+    border-color: #27272a;
+  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
+  }
+  .border-white {
+    border-color: var(--color-white);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -800,6 +840,10 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -809,6 +853,9 @@
   }
   .uppercase {
     text-transform: uppercase;
+  }
+  .opacity-50 {
+    opacity: 0.5;
   }
   .outline {
     outline-style: var(--tw-outline-style);
