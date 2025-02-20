@@ -166,7 +166,7 @@ function Eo() {
       : T.toString(36);
   }
   function St() {}
-  function Rt(s) {
+  function pt(s) {
     switch (s.status) {
       case "fulfilled":
         return s.value;
@@ -251,7 +251,7 @@ function Eo() {
       for (s = I.call(s), I = 0; !(x = s.next()).done; )
         (x = x.value), (w = Bl + Ut(x, I++)), (Q += Cl(x, T, N, w, D));
     else if (w === "object") {
-      if (typeof s.then == "function") return Cl(Rt(s), T, N, x, D);
+      if (typeof s.then == "function") return Cl(pt(s), T, N, x, D);
       throw (
         ((T = String(s)),
         Error(
@@ -627,7 +627,7 @@ function To() {
         }
         function Jt(_) {
           if (((Il = !1), ot(_), !Xl))
-            if (q(O) !== null) (Xl = !0), Rt();
+            if (q(O) !== null) (Xl = !0), pt();
             else {
               var Y = q(E);
               Y !== null && Cl(Jt, Y.startTime - _);
@@ -701,7 +701,7 @@ function To() {
           lt = function () {
             Kl(P, 0);
           };
-        function Rt() {
+        function pt() {
           F || ((F = !0), lt());
         }
         function Cl(_, Y) {
@@ -719,7 +719,7 @@ function To() {
             _.callback = null;
           }),
           (A.unstable_continueExecution = function () {
-            Xl || Sl || ((Xl = !0), Rt());
+            Xl || Sl || ((Xl = !0), pt());
           }),
           (A.unstable_forceFrameRate = function (_) {
             0 > _ || 125 < _
@@ -813,7 +813,7 @@ function To() {
                   q(O) === null &&
                     _ === q(E) &&
                     (Il ? (Mt(Ql), (Ql = -1)) : (Il = !0), Cl(Jt, j - nl)))
-                : ((_.sortIndex = s), cl(O, _), Xl || Sl || ((Xl = !0), Rt())),
+                : ((_.sortIndex = s), cl(O, _), Xl || Sl || ((Xl = !0), pt())),
               _
             );
           }),
@@ -1173,10 +1173,10 @@ function Oo() {
       Ut
     );
   }
-  var Rt = !1;
+  var pt = !1;
   function Cl(l, t) {
-    if (!l || Rt) return "";
-    Rt = !0;
+    if (!l || pt) return "";
+    pt = !0;
     var u = Error.prepareStackTrace;
     Error.prepareStackTrace = void 0;
     try {
@@ -1278,7 +1278,7 @@ function Oo() {
           }
       }
     } finally {
-      (Rt = !1), (Error.prepareStackTrace = u);
+      (pt = !1), (Error.prepareStackTrace = u);
     }
     return (u = l ? l.displayName || l.name : "") ? St(u) : "";
   }
@@ -1510,7 +1510,7 @@ Error generating stack: ` +
     return (l >>>= 0), l === 0 ? 32 : (31 - ((uv(l) / av) | 0)) | 0;
   }
   var Ue = 128,
-    Re = 4194304;
+    pe = 4194304;
   function Eu(l) {
     var t = l & 42;
     if (t !== 0) return t;
@@ -1649,8 +1649,8 @@ Error generating stack: ` +
     return (Ue <<= 1), !(Ue & 4194176) && (Ue = 128), l;
   }
   function ic() {
-    var l = Re;
-    return (Re <<= 1), !(Re & 62914560) && (Re = 4194304), l;
+    var l = pe;
+    return (pe <<= 1), !(pe & 62914560) && (pe = 4194304), l;
   }
   function Ln(l) {
     for (var t = [], u = 0; 31 > u; u++) t.push(l);
@@ -1728,7 +1728,7 @@ Error generating stack: ` +
     cv = "__reactListeners$" + Pt,
     sv = "__reactHandles$" + Pt,
     hc = "__reactResources$" + Pt,
-    Ra = "__reactMarker$" + Pt;
+    pa = "__reactMarker$" + Pt;
   function wn(l) {
     delete l[Hl], delete l[Zl], delete l[Kn], delete l[cv], delete l[sv];
   }
@@ -1774,7 +1774,7 @@ Error generating stack: ` +
     );
   }
   function Ol(l) {
-    l[Ra] = !0;
+    l[pa] = !0;
   }
   var oc = new Set(),
     rc = {};
@@ -1803,7 +1803,7 @@ Error generating stack: ` +
       ? (mc[l] = !0)
       : ((yc[l] = !0), !1);
   }
-  function pe(l, t, u) {
+  function Re(l, t, u) {
     if (vv(t))
       if (u === null) l.removeAttribute(t);
       else {
@@ -1837,7 +1837,7 @@ Error generating stack: ` +
       l.setAttribute(t, "" + u);
     }
   }
-  function pt(l, t, u, a) {
+  function Rt(l, t, u, a) {
     if (a === null) l.removeAttribute(u);
     else {
       switch (typeof a) {
@@ -2279,7 +2279,7 @@ Error generating stack: ` +
         for (t = 0; t < l.length; t++) _c(l[t]);
     }
   }
-  function pa(l, t) {
+  function Ra(l, t) {
     var u = l.stateNode;
     if (u === null) return null;
     var a = u[Zl] || null;
@@ -2470,7 +2470,7 @@ Error generating stack: ` +
     }),
     _v = Vl(Av),
     Ov = P({}, Au, { data: 0 }),
-    Rc = Vl(Ov),
+    pc = Vl(Ov),
     Dv = {
       Esc: "Escape",
       Spacebar: " ",
@@ -2529,7 +2529,7 @@ Error generating stack: ` +
       Meta: "metaKey",
       Shift: "shiftKey",
     };
-  function Rv(l) {
+  function pv(l) {
     var t = this.nativeEvent;
     return t.getModifierState
       ? t.getModifierState(l)
@@ -2538,7 +2538,7 @@ Error generating stack: ` +
       : !1;
   }
   function ef() {
-    return Rv;
+    return pv;
   }
   var xv = P({}, Na, {
       key: function (l) {
@@ -2575,7 +2575,7 @@ Error generating stack: ` +
           : 0;
       },
     }),
-    pv = Vl(xv),
+    Rv = Vl(xv),
     Hv = P({}, Qe, {
       pointerId: 0,
       width: 0,
@@ -2630,7 +2630,7 @@ Error generating stack: ` +
     qa = null;
   xt && "documentMode" in document && (qa = document.documentMode);
   var Zv = xt && "TextEvent" in window && !qa,
-    pc = xt && (!nf || (qa && 8 < qa && 11 >= qa)),
+    Rc = xt && (!nf || (qa && 8 < qa && 11 >= qa)),
     Hc = " ",
     Nc = !1;
   function jc(l, t) {
@@ -2678,7 +2678,7 @@ Error generating stack: ` +
         }
         return null;
       case "compositionend":
-        return pc && t.locale !== "ko" ? null : t.data;
+        return Rc && t.locale !== "ko" ? null : t.data;
       default:
         return null;
     }
@@ -3110,7 +3110,7 @@ Error generating stack: ` +
         (nt[ft] = null);
   }
   var Yl = null,
-    Rl = null,
+    pl = null,
     k = !1,
     yt = null,
     Tt = !1,
@@ -3208,7 +3208,7 @@ Error generating stack: ` +
             !(u !== "form" && u !== "button") || Yi(l.type, l.memoizedProps))),
         (u = !u)),
       u && (t = !0),
-      t && Rl && Uu(l),
+      t && pl && Uu(l),
       ns(l),
       l.tag === 13)
     ) {
@@ -3219,20 +3219,20 @@ Error generating stack: ` +
           if (l.nodeType === 8)
             if (((u = l.data), u === "/$")) {
               if (t === 0) {
-                Rl = gt(l.nextSibling);
+                pl = gt(l.nextSibling);
                 break l;
               }
               t--;
             } else (u !== "$" && u !== "$!" && u !== "$?") || t++;
           l = l.nextSibling;
         }
-        Rl = null;
+        pl = null;
       }
-    } else Rl = Yl ? gt(l.stateNode.nextSibling) : null;
+    } else pl = Yl ? gt(l.stateNode.nextSibling) : null;
     return !0;
   }
   function Ca() {
-    (Rl = Yl = null), (k = !1);
+    (pl = Yl = null), (k = !1);
   }
   function Za(l) {
     yt === null ? (yt = [l]) : yt.push(l);
@@ -3469,92 +3469,92 @@ Error generating stack: ` +
     }
     function U(h, d, o, S) {
       for (
-        var M = null, Z = null, R = d, p = (d = 0), Ul = null;
-        R !== null && p < o.length;
-        p++
+        var M = null, Z = null, p = d, R = (d = 0), Ul = null;
+        p !== null && R < o.length;
+        R++
       ) {
-        R.index > p ? ((Ul = R), (R = null)) : (Ul = R.sibling);
-        var W = y(h, R, o[p], S);
+        p.index > R ? ((Ul = p), (p = null)) : (Ul = p.sibling);
+        var W = y(h, p, o[R], S);
         if (W === null) {
-          R === null && (R = Ul);
+          p === null && (p = Ul);
           break;
         }
-        l && R && W.alternate === null && t(h, R),
-          (d = n(W, d, p)),
+        l && p && W.alternate === null && t(h, p),
+          (d = n(W, d, R)),
           Z === null ? (M = W) : (Z.sibling = W),
           (Z = W),
-          (R = Ul);
+          (p = Ul);
       }
-      if (p === o.length) return u(h, R), k && Mu(h, p), M;
-      if (R === null) {
-        for (; p < o.length; p++)
-          (R = b(h, o[p], S)),
-            R !== null &&
-              ((d = n(R, d, p)),
-              Z === null ? (M = R) : (Z.sibling = R),
-              (Z = R));
-        return k && Mu(h, p), M;
+      if (R === o.length) return u(h, p), k && Mu(h, R), M;
+      if (p === null) {
+        for (; R < o.length; R++)
+          (p = b(h, o[R], S)),
+            p !== null &&
+              ((d = n(p, d, R)),
+              Z === null ? (M = p) : (Z.sibling = p),
+              (Z = p));
+        return k && Mu(h, R), M;
       }
-      for (R = a(R); p < o.length; p++)
-        (Ul = m(R, h, p, o[p], S)),
+      for (p = a(p); R < o.length; R++)
+        (Ul = m(p, h, R, o[R], S)),
           Ul !== null &&
             (l &&
               Ul.alternate !== null &&
-              R.delete(Ul.key === null ? p : Ul.key),
-            (d = n(Ul, d, p)),
+              p.delete(Ul.key === null ? R : Ul.key),
+            (d = n(Ul, d, R)),
             Z === null ? (M = Ul) : (Z.sibling = Ul),
             (Z = Ul));
       return (
         l &&
-          R.forEach(function (bu) {
+          p.forEach(function (bu) {
             return t(h, bu);
           }),
-        k && Mu(h, p),
+        k && Mu(h, R),
         M
       );
     }
     function B(h, d, o, S) {
       if (o == null) throw Error(r(151));
       for (
-        var M = null, Z = null, R = d, p = (d = 0), Ul = null, W = o.next();
-        R !== null && !W.done;
-        p++, W = o.next()
+        var M = null, Z = null, p = d, R = (d = 0), Ul = null, W = o.next();
+        p !== null && !W.done;
+        R++, W = o.next()
       ) {
-        R.index > p ? ((Ul = R), (R = null)) : (Ul = R.sibling);
-        var bu = y(h, R, W.value, S);
+        p.index > R ? ((Ul = p), (p = null)) : (Ul = p.sibling);
+        var bu = y(h, p, W.value, S);
         if (bu === null) {
-          R === null && (R = Ul);
+          p === null && (p = Ul);
           break;
         }
-        l && R && bu.alternate === null && t(h, R),
-          (d = n(bu, d, p)),
+        l && p && bu.alternate === null && t(h, p),
+          (d = n(bu, d, R)),
           Z === null ? (M = bu) : (Z.sibling = bu),
           (Z = bu),
-          (R = Ul);
+          (p = Ul);
       }
-      if (W.done) return u(h, R), k && Mu(h, p), M;
-      if (R === null) {
-        for (; !W.done; p++, W = o.next())
+      if (W.done) return u(h, p), k && Mu(h, R), M;
+      if (p === null) {
+        for (; !W.done; R++, W = o.next())
           (W = b(h, W.value, S)),
             W !== null &&
-              ((d = n(W, d, p)),
+              ((d = n(W, d, R)),
               Z === null ? (M = W) : (Z.sibling = W),
               (Z = W));
-        return k && Mu(h, p), M;
+        return k && Mu(h, R), M;
       }
-      for (R = a(R); !W.done; p++, W = o.next())
-        (W = m(R, h, p, W.value, S)),
+      for (p = a(p); !W.done; R++, W = o.next())
+        (W = m(p, h, R, W.value, S)),
           W !== null &&
-            (l && W.alternate !== null && R.delete(W.key === null ? p : W.key),
-            (d = n(W, d, p)),
+            (l && W.alternate !== null && p.delete(W.key === null ? R : W.key),
+            (d = n(W, d, R)),
             Z === null ? (M = W) : (Z.sibling = W),
             (Z = W));
       return (
         l &&
-          R.forEach(function (go) {
+          p.forEach(function (go) {
             return t(h, go);
           }),
-        k && Mu(h, p),
+        k && Mu(h, R),
         M
       );
     }
@@ -3660,15 +3660,15 @@ Error generating stack: ` +
         Ka = 0;
         var M = ml(h, d, o, S);
         return (ea = null), M;
-      } catch (R) {
-        if (R === Va) throw R;
-        var Z = dt(29, R, null, h.mode);
+      } catch (p) {
+        if (p === Va) throw p;
+        var Z = dt(29, p, null, h.mode);
         return (Z.lanes = S), (Z.return = h), Z;
       } finally {
       }
     };
   }
-  var Ru = vs(!0),
+  var pu = vs(!0),
     hs = vs(!1),
     na = I(null),
     $e = I(0);
@@ -3845,7 +3845,7 @@ Error generating stack: ` +
     El = null,
     Ie = !1,
     ca = !1,
-    pu = !1,
+    Ru = !1,
     ln = 0,
     Wa = 0,
     sa = null,
@@ -3867,9 +3867,9 @@ Error generating stack: ` +
       (t.updateQueue = null),
       (t.lanes = 0),
       (H.H = l === null || l.memoizedState === null ? Hu : eu),
-      (pu = !1),
+      (Ru = !1),
       (n = u(a, e)),
-      (pu = !1),
+      (Ru = !1),
       ca && (n = bs(t, u, a, e)),
       Ss(l),
       n
@@ -3984,7 +3984,7 @@ Error generating stack: ` +
     }
     throw Error(r(438, String(l)));
   }
-  function Rf(l) {
+  function pf(l) {
     var t = null,
       u = C.updateQueue;
     if ((u !== null && (t = u.memoCache), t == null)) {
@@ -4070,7 +4070,7 @@ Error generating stack: ` +
               (C.lanes |= y),
               (ou |= y);
           (b = v.action),
-            pu && u(n, b),
+            Ru && u(n, b),
             (n = v.hasEagerState ? v.eagerState : u(n, b));
         } else
           (y = {
@@ -4098,7 +4098,7 @@ Error generating stack: ` +
     }
     return e === null && (a.lanes = 0), [l.memoizedState, a.dispatch];
   }
-  function pf(l) {
+  function Rf(l) {
     var t = Tl(),
       u = t.queue;
     if (u === null) throw Error(r(311));
@@ -4177,7 +4177,7 @@ Error generating stack: ` +
     var t = Ll();
     if (typeof l == "function") {
       var u = l;
-      if (((l = u()), pu)) {
+      if (((l = u()), Ru)) {
         Ft(!0);
         try {
           u();
@@ -4253,15 +4253,15 @@ Error generating stack: ` +
     u !== null && typeof u == "object" && typeof u.then == "function"
       ? u.then(
           function (a) {
-            Rs(l, t, a);
+            ps(l, t, a);
           },
           function (a) {
             return Nf(l, t, a);
           }
         )
-      : Rs(l, t, u);
+      : ps(l, t, u);
   }
-  function Rs(l, t, u) {
+  function ps(l, t, u) {
     (t.status = "fulfilled"),
       (t.value = u),
       xs(t),
@@ -4284,7 +4284,7 @@ Error generating stack: ` +
     l = l.listeners;
     for (var t = 0; t < l.length; t++) (0, l[t])();
   }
-  function ps(l, t) {
+  function Rs(l, t) {
     return t;
   }
   function Hs(l, t) {
@@ -4294,9 +4294,9 @@ Error generating stack: ` +
         l: {
           var a = C;
           if (k) {
-            if (Rl) {
+            if (pl) {
               t: {
-                for (var e = Rl, n = Tt; e.nodeType !== 8; ) {
+                for (var e = pl, n = Tt; e.nodeType !== 8; ) {
                   if (!n) {
                     e = null;
                     break t;
@@ -4309,7 +4309,7 @@ Error generating stack: ` +
                 (n = e.data), (e = n === "F!" || n === "F" ? e : null);
               }
               if (e) {
-                (Rl = gt(e.nextSibling)), (a = e.data === "F!");
+                (pl = gt(e.nextSibling)), (a = e.data === "F!");
                 break l;
               }
             }
@@ -4327,7 +4327,7 @@ Error generating stack: ` +
         pending: null,
         lanes: 0,
         dispatch: null,
-        lastRenderedReducer: ps,
+        lastRenderedReducer: Rs,
         lastRenderedState: t,
       }),
       (u.queue = a),
@@ -4349,7 +4349,7 @@ Error generating stack: ` +
     return js(t, ll, l);
   }
   function js(l, t, u) {
-    (t = xf(l, t, ps)[0]),
+    (t = xf(l, t, Rs)[0]),
       (l = an(qt)[0]),
       (t =
         typeof t == "object" && t !== null && typeof t.then == "function"
@@ -4453,7 +4453,7 @@ Error generating stack: ` +
     t = t === void 0 ? null : t;
     var a = u.memoizedState;
     if (t !== null && _f(t, a[1])) return a[0];
-    if (((a = l()), pu)) {
+    if (((a = l()), Ru)) {
       Ft(!0);
       try {
         l();
@@ -4707,7 +4707,7 @@ Error generating stack: ` +
       var u = Ll();
       t = t === void 0 ? null : t;
       var a = l();
-      if (pu) {
+      if (Ru) {
         Ft(!0);
         try {
           l();
@@ -4721,7 +4721,7 @@ Error generating stack: ` +
       var a = Ll();
       if (u !== void 0) {
         var e = u(t);
-        if (pu) {
+        if (Ru) {
           Ft(!0);
           try {
             u(t);
@@ -4805,7 +4805,7 @@ Error generating stack: ` +
       return (Ll().memoizedState = oh.bind(null, C));
     },
   };
-  (Hu.useMemoCache = Rf),
+  (Hu.useMemoCache = pf),
     (Hu.useHostTransitionStatus = Gf),
     (Hu.useFormState = Hs),
     (Hu.useActionState = Hs),
@@ -4852,7 +4852,7 @@ Error generating stack: ` +
     useId: ks,
   };
   (eu.useCacheRefresh = Ws),
-    (eu.useMemoCache = Rf),
+    (eu.useMemoCache = pf),
     (eu.useHostTransitionStatus = Gf),
     (eu.useFormState = Ns),
     (eu.useActionState = Ns),
@@ -4870,10 +4870,10 @@ Error generating stack: ` +
     useInsertionEffect: Gs,
     useLayoutEffect: Xs,
     useMemo: Vs,
-    useReducer: pf,
+    useReducer: Rf,
     useRef: Bs,
     useState: function () {
-      return pf(qt);
+      return Rf(qt);
     },
     useDebugValue: qf,
     useDeferredValue: function (l, t) {
@@ -4881,7 +4881,7 @@ Error generating stack: ` +
       return ll === null ? Bf(u, l, t) : Ls(u, ll.memoizedState, l, t);
     },
     useTransition: function () {
-      var l = pf(qt)[0],
+      var l = Rf(qt)[0],
         t = Tl().memoizedState;
       return [typeof l == "boolean" ? l : $a(l), t];
     },
@@ -4889,7 +4889,7 @@ Error generating stack: ` +
     useId: ks,
   };
   (Nu.useCacheRefresh = Ws),
-    (Nu.useMemoCache = Rf),
+    (Nu.useMemoCache = pf),
     (Nu.useHostTransitionStatus = Gf),
     (Nu.useFormState = qs),
     (Nu.useActionState = qs),
@@ -5182,7 +5182,7 @@ Error generating stack: ` +
   var i0 = Error(r(461)),
     Dl = !1;
   function xl(l, t, u, a) {
-    t.child = l === null ? hs(t, null, u, a) : Ru(t, l.child, u, a);
+    t.child = l === null ? hs(t, null, u, a) : pu(t, l.child, u, a);
   }
   function c0(l, t, u, a, e) {
     u = u.render;
@@ -5465,8 +5465,8 @@ Error generating stack: ` +
               : n.render()),
           (t.flags |= 1),
           l !== null && a
-            ? ((t.child = Ru(t, l.child, null, e)),
-              (t.child = Ru(t, null, u, e)))
+            ? ((t.child = pu(t, l.child, null, e)),
+              (t.child = pu(t, null, u, e)))
             : xl(l, t, u, e),
           (t.memoizedState = n.state),
           (l = t.child))
@@ -5500,7 +5500,7 @@ Error generating stack: ` +
     ) {
       if (k) {
         if ((e ? tu(t) : uu(), k)) {
-          var i = Rl,
+          var i = pl,
             c;
           if ((c = i)) {
             l: {
@@ -5527,7 +5527,7 @@ Error generating stack: ` +
                 (c.return = t),
                 (t.child = c),
                 (Yl = t),
-                (Rl = null),
+                (pl = null),
                 (c = !0))
               : (c = !1);
           }
@@ -5578,7 +5578,7 @@ Error generating stack: ` +
             (e.return = t),
             (a.sibling = e),
             (t.child = a),
-            Ru(t, l.child, null, u),
+            pu(t, l.child, null, u),
             (a = t.child),
             (a.memoizedState = Kf(u)),
             (a.childLanes = wf(l, f, u)),
@@ -5650,7 +5650,7 @@ Error generating stack: ` +
             (i._reactRetry = t),
             (t = null))
           : ((l = c.treeContext),
-            (Rl = gt(i.nextSibling)),
+            (pl = gt(i.nextSibling)),
             (Yl = t),
             (k = !0),
             (yt = null),
@@ -5719,7 +5719,7 @@ Error generating stack: ` +
   }
   function Wf(l, t, u) {
     return (
-      Ru(t, l.child, null, u),
+      pu(t, l.child, null, u),
       (l = Jf(t, t.pendingProps.children)),
       (l.flags |= 2),
       (t.memoizedState = null),
@@ -5947,7 +5947,7 @@ Error generating stack: ` +
               break l;
             } else
               for (
-                Rl = gt(t.stateNode.containerInfo.firstChild),
+                pl = gt(t.stateNode.containerInfo.firstChild),
                   Yl = t,
                   k = !0,
                   yt = null,
@@ -5980,7 +5980,7 @@ Error generating stack: ` +
                 (a = Dn($t.current).createElement(u)),
                 (a[Hl] = t),
                 (a[Zl] = l),
-                pl(a, u, l),
+                Rl(a, u, l),
                 Ol(a),
                 (t.stateNode = a))
             : (t.memoizedState = zd(
@@ -5999,9 +5999,9 @@ Error generating stack: ` +
             ((a = t.stateNode = bd(t.type, t.pendingProps, $t.current)),
             (Yl = t),
             (Tt = !0),
-            (Rl = gt(a.firstChild))),
+            (pl = gt(a.firstChild))),
           (a = t.pendingProps.children),
-          l !== null || k ? xl(l, t, a, u) : (t.child = Ru(t, null, a, u)),
+          l !== null || k ? xl(l, t, a, u) : (t.child = pu(t, null, a, u)),
           Pa(l, t),
           t.child
         );
@@ -6009,12 +6009,12 @@ Error generating stack: ` +
         return (
           l === null &&
             k &&
-            ((e = a = Rl) &&
+            ((e = a = pl) &&
               ((a = wh(a, t.type, t.pendingProps, Tt)),
               a !== null
                 ? ((t.stateNode = a),
                   (Yl = t),
-                  (Rl = gt(a.firstChild)),
+                  (pl = gt(a.firstChild)),
                   (Tt = !1),
                   (e = !0))
                 : (e = !1)),
@@ -6035,10 +6035,10 @@ Error generating stack: ` +
         return (
           l === null &&
             k &&
-            ((l = u = Rl) &&
+            ((l = u = pl) &&
               ((u = Jh(u, t.pendingProps, Tt)),
               u !== null
-                ? ((t.stateNode = u), (Yl = t), (Rl = null), (l = !0))
+                ? ((t.stateNode = u), (Yl = t), (pl = null), (l = !0))
                 : (l = !1)),
             l || Uu(t)),
           null
@@ -6049,7 +6049,7 @@ Error generating stack: ` +
         return (
           Oe(t, t.stateNode.containerInfo),
           (a = t.pendingProps),
-          l === null ? (t.child = Ru(t, null, a, u)) : xl(l, t, a, u),
+          l === null ? (t.child = pu(t, null, a, u)) : xl(l, t, a, u),
           t.child
         );
       case 11:
@@ -6627,7 +6627,7 @@ Error generating stack: ` +
     ii = !1,
     U0 = typeof WeakSet == "function" ? WeakSet : Set,
     Ml = null,
-    R0 = !1;
+    p0 = !1;
   function gh(l, t) {
     if (((l = l.containerInfo), (qi = Hn), (l = wc(l)), sf(l))) {
       if ("selectionStart" in l)
@@ -6748,7 +6748,7 @@ Error generating stack: ` +
           }
           Ml = t.return;
         }
-    return (U = R0), (R0 = !1), U;
+    return (U = p0), (p0 = !1), U;
   }
   function x0(l, t, u) {
     var a = u.flags;
@@ -6827,9 +6827,9 @@ Error generating stack: ` +
         Ct(l, u);
     }
   }
-  function p0(l) {
+  function R0(l) {
     var t = l.alternate;
-    t !== null && ((l.alternate = null), p0(t)),
+    t !== null && ((l.alternate = null), R0(t)),
       (l.child = null),
       (l.deletions = null),
       (l.sibling = null),
@@ -6975,7 +6975,7 @@ Error generating stack: ` +
   function ci(l, t) {
     var u = Sh(l);
     t.forEach(function (a) {
-      var e = ph.bind(null, l, a);
+      var e = Rh.bind(null, l, a);
       u.has(a) || (u.add(a), a.then(e, e));
     });
   }
@@ -7059,7 +7059,7 @@ Error generating stack: ` +
                     case "title":
                       (n = e.getElementsByTagName("title")[0]),
                         (!n ||
-                          n[Ra] ||
+                          n[pa] ||
                           n[Hl] ||
                           n.namespaceURI === "http://www.w3.org/2000/svg" ||
                           n.hasAttribute("itemprop")) &&
@@ -7068,7 +7068,7 @@ Error generating stack: ` +
                             n,
                             e.querySelector("head > title")
                           )),
-                        pl(n, a, u),
+                        Rl(n, a, u),
                         (n[Hl] = l),
                         Ol(n),
                         (a = n);
@@ -7093,7 +7093,7 @@ Error generating stack: ` +
                           }
                       }
                       (n = e.createElement(a)),
-                        pl(n, a, u),
+                        Rl(n, a, u),
                         e.head.appendChild(n);
                       break;
                     case "meta":
@@ -7121,7 +7121,7 @@ Error generating stack: ` +
                           }
                       }
                       (n = e.createElement(a)),
-                        pl(n, a, u),
+                        Rl(n, a, u),
                         e.head.appendChild(n);
                       break;
                     default:
@@ -7153,7 +7153,7 @@ Error generating stack: ` +
             for (var c = e.firstChild; c; ) {
               var v = c.nextSibling,
                 g = c.nodeName;
-              c[Ra] ||
+              c[pa] ||
                 g === "HEAD" ||
                 g === "BODY" ||
                 g === "SCRIPT" ||
@@ -7164,7 +7164,7 @@ Error generating stack: ` +
             }
             for (var b = l.type, y = e.attributes; y.length; )
               e.removeAttributeNode(y[0]);
-            pl(e, b, n), (e[Hl] = l), (e[Zl] = n);
+            Rl(e, b, n), (e[Hl] = l), (e[Zl] = n);
           } catch (U) {
             al(l, l.return, U);
           }
@@ -7201,7 +7201,7 @@ Error generating stack: ` +
         break;
       case 3:
         if (
-          ((Rn = null),
+          ((pn = null),
           (e = mt),
           (mt = Mn(t.containerInfo)),
           ct(t, l),
@@ -7732,7 +7732,7 @@ Error generating stack: ` +
           a = Ml;
           var e = a.sibling,
             n = a.return;
-          if ((p0(a), a === u)) {
+          if ((R0(a), a === u)) {
             Ml = null;
             break l;
           }
@@ -8123,7 +8123,7 @@ Error generating stack: ` +
               (e.sibling.return = e.return), (e = e.sibling);
             }
             t.stateNode = l;
-            l: switch ((pl(l, u, a), u)) {
+            l: switch ((Rl(l, u, a), u)) {
               case "button":
               case "input":
               case "select":
@@ -9055,9 +9055,9 @@ Error generating stack: ` +
       a.set(t, e);
     } else (e = a.get(t)), e === void 0 && ((e = new Set()), a.set(t, e));
     e.has(u) ||
-      ((ri = !0), e.add(u), (l = Rh.bind(null, l, t, u)), t.then(l, l));
+      ((ri = !0), e.add(u), (l = ph.bind(null, l, t, u)), t.then(l, l));
   }
-  function Rh(l, t, u) {
+  function ph(l, t, u) {
     var a = l.pingCache;
     a !== null && a.delete(t),
       (l.pingedLanes |= l.suspendedLanes & u),
@@ -9078,7 +9078,7 @@ Error generating stack: ` +
       u = 0;
     t !== null && (u = t.retryLane), ad(l, u);
   }
-  function ph(l, t) {
+  function Rh(l, t) {
     var u = 0;
     switch (l.tag) {
       case 13:
@@ -9304,8 +9304,8 @@ Error generating stack: ` +
       });
     }
   }
-  for (var Ri = 0; Ri < ls.length; Ri++) {
-    var xi = ls[Ri],
+  for (var pi = 0; pi < ls.length; pi++) {
+    var xi = ls[pi],
       Bh = xi.toLowerCase(),
       Yh = xi[0].toUpperCase() + xi.slice(1);
     rt(Bh, "on" + Yh);
@@ -9408,7 +9408,7 @@ Error generating stack: ` +
     var a = l + "__bubble";
     u.has(a) || (dd(t, l, 2, !1), u.add(a));
   }
-  function pi(l, t, u) {
+  function Ri(l, t, u) {
     var a = 0;
     t && (a |= 4), dd(u, l, a, t);
   }
@@ -9417,10 +9417,10 @@ Error generating stack: ` +
     if (!l[An]) {
       (l[An] = !0),
         oc.forEach(function (u) {
-          u !== "selectionchange" && (Gh.has(u) || pi(u, !1, l), pi(u, !0, l));
+          u !== "selectionchange" && (Gh.has(u) || Ri(u, !1, l), Ri(u, !0, l));
         });
       var t = l.nodeType === 9 ? l : l.ownerDocument;
-      t === null || t[An] || ((t[An] = !0), pi("selectionchange", !1, t));
+      t === null || t[An] || ((t[An] = !0), Ri("selectionchange", !1, t));
     }
   }
   function dd(l, t, u, a) {
@@ -9492,7 +9492,7 @@ Error generating stack: ` +
               if (Ye(u) === 0) break l;
             case "keydown":
             case "keyup":
-              m = pv;
+              m = Rv;
               break;
             case "focusin":
               (U = "focus"), (m = af);
@@ -9578,7 +9578,7 @@ Error generating stack: ` +
               (S !== 5 && S !== 26 && S !== 27) ||
                 o === null ||
                 h === null ||
-                ((S = pa(d, h)), S != null && B.push(oe(d, S, o))),
+                ((S = Ra(d, h)), S != null && B.push(oe(d, S, o))),
               ml)
             )
               break;
@@ -9712,47 +9712,47 @@ Error generating stack: ` +
           case "keyup":
             Jc(b, u, g);
         }
-        var R;
+        var p;
         if (nf)
           l: {
             switch (l) {
               case "compositionstart":
-                var p = "onCompositionStart";
+                var R = "onCompositionStart";
                 break l;
               case "compositionend":
-                p = "onCompositionEnd";
+                R = "onCompositionEnd";
                 break l;
               case "compositionupdate":
-                p = "onCompositionUpdate";
+                R = "onCompositionUpdate";
                 break l;
             }
-            p = void 0;
+            R = void 0;
           }
         else
           Fu
-            ? jc(l, u) && (p = "onCompositionEnd")
+            ? jc(l, u) && (R = "onCompositionEnd")
             : l === "keydown" &&
               u.keyCode === 229 &&
-              (p = "onCompositionStart");
-        p &&
-          (pc &&
+              (R = "onCompositionStart");
+        R &&
+          (Rc &&
             u.locale !== "ko" &&
-            (Fu || p !== "onCompositionStart"
-              ? p === "onCompositionEnd" && Fu && (R = Dc())
+            (Fu || R !== "onCompositionStart"
+              ? R === "onCompositionEnd" && Fu && (p = Dc())
               : ((It = g),
                 (lf = "value" in It ? It.value : It.textContent),
                 (Fu = !0))),
-          (Z = _n(v, p)),
+          (Z = _n(v, R)),
           0 < Z.length &&
-            ((p = new Rc(p, l, null, u, g)),
-            b.push({ event: p, listeners: Z }),
-            R ? (p.data = R) : ((R = qc(u)), R !== null && (p.data = R)))),
-          (R = Zv ? Vv(l, u) : Lv(l, u)) &&
-            ((p = _n(v, "onBeforeInput")),
-            0 < p.length &&
-              ((Z = new Rc("onBeforeInput", "beforeinput", null, u, g)),
-              b.push({ event: Z, listeners: p }),
-              (Z.data = R))),
+            ((R = new pc(R, l, null, u, g)),
+            b.push({ event: R, listeners: Z }),
+            p ? (R.data = p) : ((p = qc(u)), p !== null && (R.data = p)))),
+          (p = Zv ? Vv(l, u) : Lv(l, u)) &&
+            ((R = _n(v, "onBeforeInput")),
+            0 < R.length &&
+              ((Z = new pc("onBeforeInput", "beforeinput", null, u, g)),
+              b.push({ event: Z, listeners: R }),
+              (Z.data = p))),
           qh(b, l, v, u, g);
       }
       sd(b, t);
@@ -9768,9 +9768,9 @@ Error generating stack: ` +
       (e = e.tag),
         (e !== 5 && e !== 26 && e !== 27) ||
           n === null ||
-          ((e = pa(l, u)),
+          ((e = Ra(l, u)),
           e != null && a.unshift(oe(l, e, n)),
-          (e = pa(l, t)),
+          (e = Ra(l, t)),
           e != null && a.push(oe(l, e, n))),
         (l = l.return);
     }
@@ -9792,8 +9792,8 @@ Error generating stack: ` +
         v === null ||
         ((c = v),
         e
-          ? ((v = pa(u, n)), v != null && f.unshift(oe(u, v, c)))
-          : e || ((v = pa(u, n)), v != null && f.push(oe(u, v, c)))),
+          ? ((v = Ra(u, n)), v != null && f.unshift(oe(u, v, c)))
+          : e || ((v = Ra(u, n)), v != null && f.push(oe(u, v, c)))),
         (u = u.return);
     }
     f.length !== 0 && l.push({ event: t, listeners: f });
@@ -9999,37 +9999,37 @@ Error generating stack: ` +
           : l.setAttribute(u, a);
         break;
       case "popover":
-        K("beforetoggle", l), K("toggle", l), pe(l, "popover", a);
+        K("beforetoggle", l), K("toggle", l), Re(l, "popover", a);
         break;
       case "xlinkActuate":
-        pt(l, "http://www.w3.org/1999/xlink", "xlink:actuate", a);
+        Rt(l, "http://www.w3.org/1999/xlink", "xlink:actuate", a);
         break;
       case "xlinkArcrole":
-        pt(l, "http://www.w3.org/1999/xlink", "xlink:arcrole", a);
+        Rt(l, "http://www.w3.org/1999/xlink", "xlink:arcrole", a);
         break;
       case "xlinkRole":
-        pt(l, "http://www.w3.org/1999/xlink", "xlink:role", a);
+        Rt(l, "http://www.w3.org/1999/xlink", "xlink:role", a);
         break;
       case "xlinkShow":
-        pt(l, "http://www.w3.org/1999/xlink", "xlink:show", a);
+        Rt(l, "http://www.w3.org/1999/xlink", "xlink:show", a);
         break;
       case "xlinkTitle":
-        pt(l, "http://www.w3.org/1999/xlink", "xlink:title", a);
+        Rt(l, "http://www.w3.org/1999/xlink", "xlink:title", a);
         break;
       case "xlinkType":
-        pt(l, "http://www.w3.org/1999/xlink", "xlink:type", a);
+        Rt(l, "http://www.w3.org/1999/xlink", "xlink:type", a);
         break;
       case "xmlBase":
-        pt(l, "http://www.w3.org/XML/1998/namespace", "xml:base", a);
+        Rt(l, "http://www.w3.org/XML/1998/namespace", "xml:base", a);
         break;
       case "xmlLang":
-        pt(l, "http://www.w3.org/XML/1998/namespace", "xml:lang", a);
+        Rt(l, "http://www.w3.org/XML/1998/namespace", "xml:lang", a);
         break;
       case "xmlSpace":
-        pt(l, "http://www.w3.org/XML/1998/namespace", "xml:space", a);
+        Rt(l, "http://www.w3.org/XML/1998/namespace", "xml:space", a);
         break;
       case "is":
-        pe(l, "is", a);
+        Re(l, "is", a);
         break;
       case "innerText":
       case "textContent":
@@ -10038,7 +10038,7 @@ Error generating stack: ` +
         (!(2 < u.length) ||
           (u[0] !== "o" && u[0] !== "O") ||
           (u[1] !== "n" && u[1] !== "N")) &&
-          ((u = yv.get(u) || u), pe(l, u, a));
+          ((u = yv.get(u) || u), Re(l, u, a));
     }
   }
   function ji(l, t, u, a, e, n) {
@@ -10102,11 +10102,11 @@ Error generating stack: ` +
               ? (l[u] = a)
               : a === !0
               ? l.setAttribute(u, "")
-              : pe(l, u, a);
+              : Re(l, u, a);
           }
     }
   }
-  function pl(l, t, u) {
+  function Rl(l, t, u) {
     switch (t) {
       case "div":
       case "span":
@@ -10632,7 +10632,7 @@ Error generating stack: ` +
       if (l.nodeName.toLowerCase() !== t.toLowerCase()) {
         if (!a && (l.nodeName !== "INPUT" || l.type !== "hidden")) break;
       } else if (a) {
-        if (!l[Ra])
+        if (!l[pa])
           switch (t) {
             case "meta":
               if (!l.hasAttribute("itemprop")) break;
@@ -10764,7 +10764,7 @@ Error generating stack: ` +
           (l = { rel: l, crossOrigin: u, href: t }),
           a.querySelector(e) === null &&
             ((t = a.createElement("link")),
-            pl(t, "link", l),
+            Rl(t, "link", l),
             Ol(t),
             a.head.appendChild(t)));
     }
@@ -10807,7 +10807,7 @@ Error generating stack: ` +
           (t === "style" && a.querySelector(re(n))) ||
           (t === "script" && a.querySelector(ye(n))) ||
           ((t = a.createElement("link")),
-          pl(t, "link", l),
+          Rl(t, "link", l),
           Ol(t),
           a.head.appendChild(t)));
     }
@@ -10845,7 +10845,7 @@ Error generating stack: ` +
             if (u.querySelector(ye(n))) return;
         }
         (a = u.createElement("link")),
-          pl(a, "link", l),
+          Rl(a, "link", l),
           Ol(a),
           u.head.appendChild(a);
       }
@@ -10867,7 +10867,7 @@ Error generating stack: ` +
             (u = ht.get(n)) && Ci(l, u);
           var c = (f = a.createElement("link"));
           Ol(c),
-            pl(c, "link", l),
+            Rl(c, "link", l),
             (c._p = new Promise(function (v, g) {
               (c.onload = v), (c.onerror = g);
             })),
@@ -10899,7 +10899,7 @@ Error generating stack: ` +
           (t = ht.get(e)) && Zi(l, t),
           (n = u.createElement("script")),
           Ol(n),
-          pl(n, "link", l),
+          Rl(n, "link", l),
           u.head.appendChild(n)),
         (n = { type: "script", instance: n, count: 1, state: null }),
         a.set(e, n));
@@ -10919,7 +10919,7 @@ Error generating stack: ` +
           (t = ht.get(e)) && Zi(l, t),
           (n = u.createElement("script")),
           Ol(n),
-          pl(n, "link", l),
+          Rl(n, "link", l),
           u.head.appendChild(n)),
         (n = { type: "script", instance: n, count: 1, state: null }),
         a.set(e, n));
@@ -11030,7 +11030,7 @@ Error generating stack: ` +
         t.addEventListener("error", function () {
           return (a.loading |= 2);
         }),
-        pl(t, "link", u),
+        Rl(t, "link", u),
         Ol(t),
         l.head.appendChild(t));
   }
@@ -11055,7 +11055,7 @@ Error generating stack: ` +
           return (
             (a = (l.ownerDocument || l).createElement("style")),
             Ol(a),
-            pl(a, "style", e),
+            Rl(a, "style", e),
             Un(a, u.precedence, l),
             (t.instance = a)
           );
@@ -11072,7 +11072,7 @@ Error generating stack: ` +
             (f._p = new Promise(function (i, c) {
               (f.onload = i), (f.onerror = c);
             })),
-            pl(n, "link", a),
+            Rl(n, "link", a),
             (t.state.loading |= 4),
             Un(n, u.precedence, l),
             (t.instance = n)
@@ -11087,7 +11087,7 @@ Error generating stack: ` +
                 (l = l.ownerDocument || l),
                 (e = l.createElement("script")),
                 Ol(e),
-                pl(e, "link", a),
+                Rl(e, "link", a),
                 l.head.appendChild(e),
                 (t.instance = e))
           );
@@ -11131,13 +11131,13 @@ Error generating stack: ` +
       l.referrerPolicy == null && (l.referrerPolicy = t.referrerPolicy),
       l.integrity == null && (l.integrity = t.integrity);
   }
-  var Rn = null;
+  var pn = null;
   function Od(l, t, u) {
-    if (Rn === null) {
+    if (pn === null) {
       var a = new Map(),
-        e = (Rn = new Map());
+        e = (pn = new Map());
       e.set(u, a);
-    } else (e = Rn), (a = e.get(u)), a || ((a = new Map()), e.set(u, a));
+    } else (e = pn), (a = e.get(u)), a || ((a = new Map()), e.set(u, a));
     if (a.has(l)) return a;
     for (
       a.set(l, null), u = u.getElementsByTagName(l), e = 0;
@@ -11147,7 +11147,7 @@ Error generating stack: ` +
       var n = u[e];
       if (
         !(
-          n[Ra] ||
+          n[pa] ||
           n[Hl] ||
           (l === "link" && n.getAttribute("rel") === "stylesheet")
         ) &&
@@ -11249,7 +11249,7 @@ Error generating stack: ` +
         (f._p = new Promise(function (i, c) {
           (f.onload = i), (f.onerror = c);
         })),
-          pl(n, "link", u),
+          Rl(n, "link", u),
           (t.instance = n);
       }
       a.stylesheets === null && (a.stylesheets = new Map()),
@@ -11294,22 +11294,22 @@ Error generating stack: ` +
       }
     }
   }
-  var pn = null;
+  var Rn = null;
   function Vi(l, t) {
     (l.stylesheets = null),
       l.unsuspend !== null &&
         (l.count++,
-        (pn = new Map()),
+        (Rn = new Map()),
         t.forEach(co, l),
-        (pn = null),
+        (Rn = null),
         xn.call(l));
   }
   function co(l, t) {
     if (!(t.state.loading & 4)) {
-      var u = pn.get(l);
+      var u = Rn.get(l);
       if (u) var a = u.get(null);
       else {
-        (u = new Map()), pn.set(l, u);
+        (u = new Map()), Rn.set(l, u);
         for (
           var e = l.querySelectorAll(
               "link[data-precedence],style[data-precedence]"
@@ -11403,11 +11403,11 @@ Error generating stack: ` +
       l
     );
   }
-  function Rd(l) {
+  function pd(l) {
     return l ? ((l = ta), l) : ta;
   }
   function xd(l, t, u, a, e, n) {
-    (e = Rd(e)),
+    (e = pd(e)),
       a.context === null ? (a.context = e) : (a.pendingContext = e),
       (a = iu(t)),
       (a.payload = { element: u }),
@@ -11416,14 +11416,14 @@ Error generating stack: ` +
       (u = cu(l, a, t)),
       u !== null && (Gl(u, l, t), le(u, l, t));
   }
-  function pd(l, t) {
+  function Rd(l, t) {
     if (((l = l.memoizedState), l !== null && l.dehydrated !== null)) {
       var u = l.retryLane;
       l.retryLane = u !== 0 && u < t ? u : t;
     }
   }
   function Li(l, t) {
-    pd(l, t), (l = l.alternate) && pd(l, t);
+    Rd(l, t), (l = l.alternate) && Rd(l, t);
   }
   function Hd(l) {
     if (l.tag === 13) {
@@ -11886,7 +11886,7 @@ Error generating stack: ` +
             (c = u.unstable_transitionCallbacks),
           u.formState !== void 0 && (v = u.formState)),
         (t = Ud(l, 1, !0, t, u ?? null, a, e, n, f, i, c, v)),
-        (t.context = Rd(null)),
+        (t.context = pd(null)),
         (u = t.current),
         (a = Pl()),
         (e = iu(a)),
@@ -11949,7 +11949,7 @@ function Uo() {
     ],
   });
 }
-function Ro({ type: A, placeholder: cl, children: q }) {
+function po({ type: A, placeholder: cl, children: q }) {
   const [r, G] = _a.useState(!1),
     [L, el] = _a.useState(cl);
   return z.jsxs("div", {
@@ -12012,7 +12012,7 @@ function Xn({ children: A }) {
   });
 }
 const xo = "_primary_ckw6i_1",
-  po = "_secondary_ckw6i_10",
+  Ro = "_secondary_ckw6i_10",
   Ho = "_distructive_ckw6i_24",
   No = "_outline_ckw6i_35",
   jo = "_ghost_ckw6i_49",
@@ -12021,7 +12021,7 @@ const xo = "_primary_ckw6i_1",
   Yo = "_login_ckw6i_95",
   Go = {
     primary: xo,
-    secondary: po,
+    secondary: Ro,
     distructive: Ho,
     outline: No,
     ghost: jo,
@@ -12055,15 +12055,15 @@ function Xo() {
     [G, L] = _a.useState(!1),
     [el, ul] = _a.useState(!1);
   return z.jsxs("div", {
-    className:
-      "bg-black flex gap-7 flex-col scale-75  sm:p-5 md:gap-4 p-10 md:scale-100",
+    className: "bg-black flex gap-7 flex-col   sm:p-5 px-5 md:gap-4 p-10 ",
     children: [
       z.jsxs("div", {
-        className: "  flex items-center gap-3 ",
+        className:
+          " flex flex-col gap-5 sm:flex-col items-center sm:gap-5 md:flex-row md:gap-3",
         children: [
           z.jsxs("div", {
             className:
-              "flex relative  flex-col items-center gap-3 sm:relative top-5 left-0 md:static md:top-0 md:flex-row",
+              "flex relative  flex-row items-center  gap-3 sm:relative top-0 left-7 md:static md:top-0 md:flex-row",
             children: [
               z.jsx("div", {
                 onClick: () => {
@@ -12097,10 +12097,13 @@ function Xo() {
               }),
             ],
           }),
-          z.jsx("div", { className: " bg-white text2xl h-[2px] w-18" }),
+          z.jsx("div", {
+            className:
+              "bg-white w-[2px] h-[72px] sm:w-[2px] sm:h-[72px] md:h-[2px] md:w-[72px]",
+          }),
           z.jsxs("div", {
             className:
-              "flex relative  flex-col items-center gap-3 sm:relative top-5 left-0 md:static md:top-0 md:flex-row",
+              "flex relative  flex-row items-center  gap-3 sm:relative top-0 left-7 md:static md:top-0 md:flex-row",
             children: [
               z.jsx("div", {
                 onClick: () => {
@@ -12134,10 +12137,13 @@ function Xo() {
               }),
             ],
           }),
-          z.jsx("div", { className: " bg-white  text2xl h-[2px] w-18" }),
+          z.jsx("div", {
+            className:
+              "bg-white w-[2px] h-[72px] sm:w-[2px] sm:h-[72px] md:h-[2px] md:w-[72px]",
+          }),
           z.jsxs("div", {
             className:
-              "flex relative  flex-col items-center gap-3 sm:relative top-5 left-0 md:static md:top-0 md:flex-row",
+              "flex relative  flex-row items-center  gap-3 sm:relative top-0 left-7 md:static md:top-0 md:flex-row",
             children: [
               z.jsx("div", {
                 onClick: () => {
@@ -12205,14 +12211,15 @@ function Xo() {
 function Qo() {
   return z.jsxs("div", {
     className:
-      "bg-[#27272a] flex flex-col items-center p-5 min-h-50 justify-center min-w-[75%]",
+      "flex flex-col gap-6 items-center bg-[#27272a] py-5 justify-center min-w-[75%] md:py-10",
     children: [
       z.jsx("h2", {
         className: "text-3xl text-white uppercase ",
         children: "Variants",
       }),
       z.jsxs("div", {
-        className: "grid gap-5 p-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+        className:
+          "grid gap-5 p-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
         children: [
           z.jsx(Dt, {
             title: "primary",
@@ -12297,10 +12304,10 @@ function Co() {
         z.jsx(Qo, {}),
         z.jsxs("div", {
           className:
-            "flex flex-col gap-6 items-center bg-[#27272a] min-h-50 justify-center min-w-[75%]",
+            "flex flex-col gap-6 items-center bg-[#27272a] py-5 justify-center min-w-[75%] md:py-10",
           children: [
             z.jsx("h2", { children: "Custom dropdown" }),
-            z.jsxs(Ro, {
+            z.jsxs(po, {
               placeholder: "select a fruit",
               type: "fruits",
               children: [
@@ -12314,7 +12321,7 @@ function Co() {
         }),
         z.jsxs("div", {
           className:
-            "flex flex-col  items-center  bg-[#27272a]  justify-center w-80   md:min-w-[75%] gap-6 min-h-80",
+            "flex flex-col gap-6 items-center bg-[#27272a] py-5 justify-center min-w-[75%] md:py-10",
           children: [
             z.jsx("h2", { children: "Steps component" }),
             z.jsx(Xo, {}),
